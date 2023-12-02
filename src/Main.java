@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Main {
+
     public static String calc(String input) {
 
         System.out.println("Input:");
@@ -8,59 +9,59 @@ public class Main {
 
         String[] array = input.split(" ");
 
-        if (array.length > 3){
+        int x = 0;
+
+        if (array.length > 3) {
             System.out.println("Output:");
             System.out.println("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-            System.exit (1);
+            System.exit(1);
 
         }
-
-        int x = 0;
 
         try {
 
             int a = Integer.parseInt(array[0]);
             int b = Integer.parseInt(array[2]);
 
+            if (array[1].equals("+")) {
+                x = a + b;
 
-            switch (array[1]) {
-                case "+":
-                    x = a + b;
-                    break;
+            } else if (array[1].equals("-")) {
+                x = a - b;
 
-                case "-":
-                    x = a - b;
-                    break;
+            } else if (array[1].equals("/")) {
+                x = a / b;
 
-                case "*":
-                    x = a * b;
-                    break;
+            } else if (array[1].equals("*")) {
+                x = a * b;
 
-                case "/":
-                    x = a / b;
-                    break;
+            } else {
+                System.out.println("Output:");
+                System.out.println("throws Exception //т.к. формат математической операции не " +
+                        "удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+                System.exit(1);
 
             }
 
-        }catch (ArrayIndexOutOfBoundsException e){
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Output:");
             System.out.println("Exception //т.к. строка не является математической операцией");
-            System.exit (1);
+            System.exit(1);
 
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.out.println("Output:");
-            System.out.println("throws Exception ");
-            System.exit (1);
+            System.out.println("3throws Exception ");
+            System.exit(1);
+
         }
 
-    String result  = Integer.toString(x);
+        String result = Integer.toString(x);
 
-        System.out.println("Output:");
-        System.out.println(result);
-        return result;
+            System.out.println("Output:");
+            System.out.println(result);
+
+            return result;
 
     }
 
 }
-
-
