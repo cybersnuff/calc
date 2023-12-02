@@ -1,11 +1,12 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main {
+    public static String calc() {
 
-    public static String calc(String input) {
-
+        Scanner in = new Scanner(System.in);
         System.out.println("Input:");
-        System.out.println(input);
+       String input = in.nextLine();
 
         String[] array = input.split(" ");
 
@@ -58,5 +59,8 @@ public class Main {
             return result;
 
     }
+    public static void main(String[] args) {
+        calc();
 
+    }
 }
