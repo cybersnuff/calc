@@ -13,9 +13,7 @@ public class Main {
 
         if (array.length > 3) {
             System.out.println("Output:");
-            System.out.println("throws Exception //т.к. формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-            System.exit(1);
-
+            throw new RuntimeException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
 
         try {
@@ -37,21 +35,18 @@ public class Main {
 
             } else {
                 System.out.println("Output:");
-                System.out.println("throws Exception //т.к. формат математической операции не " +
-                        "удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
-                System.exit(1);
+                throw new RuntimeException("неверный оператор, используйте только +, -, /, * " +
+                        "Ваш знак - " + array[1]);
 
             }
 
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Output:");
-            System.out.println("Exception //т.к. строка не является математической операцией");
-            System.exit(1);
+            throw new RuntimeException("Cтрока не является математической операцией");
 
         } catch (NumberFormatException e) {
             System.out.println("Output:");
-            System.out.println("3throws Exception ");
-            System.exit(1);
+            throw new RuntimeException("Используйте только целые числа");
 
         }
 
