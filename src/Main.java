@@ -4,17 +4,22 @@ import java.util.Scanner;
 public class Main {
     public static String calc() {
 
-                Scanner in = new Scanner(System.in);
-                System.out.println("Input:");
-                String input = in.nextLine();
+        System.out.println("=======================");
+        System.out.println("calculator version 1.05");
+        System.out.println("=======================");
+        System.out.println();
 
-                String[] array = input.split(" ");
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input:");
+        String input = in.nextLine();
 
-                int x = 0;
+        String[] array = input.split(" ");
 
-                if (array.length > 3) {
-                    System.out.println("Output:");
-                    throw new RuntimeException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+        int x = 0;
+
+        if (array.length > 3) {
+            System.out.println("Output:");
+                 throw new RuntimeException("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
                 }
 
                 try {
@@ -62,11 +67,20 @@ public class Main {
                 System.out.println("Output:");
                 System.out.println(result);
 
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println();
+        System.out.println("=======================");
+        System.out.println("calculator version 1.05");
+        System.out.println("=======================");
+
                 return result;
 
             }
-
-
 
     public static void main(String[] args) {
         calc();
