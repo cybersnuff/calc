@@ -4,11 +4,6 @@ import java.util.Scanner;
 public class Main {
     public static String calc() {
 
-        System.out.println("=======================");
-        System.out.println("calculator version 1.05");
-        System.out.println("=======================");
-        System.out.println();
-
         Scanner in = new Scanner(System.in);
         System.out.println("Input:");
         String input = in.nextLine();
@@ -74,9 +69,9 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("=======================");
-        System.out.println("calculator version 1.05");
-        System.out.println("=======================");
+        System.out.println("========================");
+        System.out.println("calculator version 1.05a");
+        System.out.println("========================");
 
                 return result;
 
