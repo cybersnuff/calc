@@ -24,11 +24,9 @@ public class Main {
 
             if (a < 1 || a > 10 || b < 1 || b > 10) {
                 System.out.println("Output:");
-                throw new RuntimeException("Ваше число должно быть в диапазоне от 1 до 10 включительно. " +"Ваши числа: " + a + " и " + b);
+                throw new RuntimeException("Ваше число должно быть в диапазоне от 1 до 10 включительно. " + "Ваши числа: " + a + " и " + b);
 
-                }
-
-
+            }
 
 
             if (array[1].equals("+")) {
