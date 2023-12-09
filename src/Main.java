@@ -22,12 +22,6 @@ public class Main {
             int a = Integer.parseInt(array[0]);
             int b = Integer.parseInt(array[2]);
 
-            if (a < 1 || a > 10 || b < 1 || b > 10) {
-                System.out.println("Output:");
-                throw new RuntimeException("Ваше число должно быть в диапазоне от 1 до 10 включительно. " + "Ваши числа: " + a + " и " + b);
-
-            }
-
 
             if (array[1].equals("+")) {
                 x = a + b;
@@ -71,7 +65,7 @@ public class Main {
 
         System.out.println();
         System.out.println("========================");
-        System.out.println("calculator version 1.05a");
+        System.out.println("calculator version 1.06");
         System.out.println("========================");
 
         return result;
